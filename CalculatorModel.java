@@ -1,4 +1,4 @@
-public class CalculatorModel{
+public class CalculatorModel {
     public double add(double a, double b) {
         return a + b;
     }
@@ -12,8 +12,9 @@ public class CalculatorModel{
     }
 
     public double divide(double a, double b) {
-        if (b == 0)
-            return 0;
+        if (b == 0.0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        }
         return a / b;
     }
 }
